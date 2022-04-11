@@ -743,8 +743,7 @@ public class TextAreaFigure extends AttributeFigure
 	 * @throws ClassNotFoundException  thrown by called methods
 	 * @throws IOException             thrown by called methods
 	 */
-	// FIXME: Serializable object should only be in private method
-	protected void readObject(ObjectInputStream s)
+	private void readObject(ObjectInputStream s)
 		throws ClassNotFoundException, IOException {
 
 		s.defaultReadObject();
