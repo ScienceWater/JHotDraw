@@ -462,11 +462,11 @@ public class Bounds implements Serializable {
 		}
 		Bounds aBounds = (Bounds) anObject;
 
-		//FIXME: floating point equality imprecision
-		if ((_dX1 == aBounds.getLesserX()) &&
-				(_dX2 == aBounds.getGreaterX()) &&
-				(_dY1 == aBounds.getLesserY()) &&
-				(_dY2 == aBounds.getGreaterY())) {
+		double lambda = 0.0000001;
+		if ((Math.abs(_dX1 - aBounds.getLesserX()) < lambda) &&
+			(Math.abs(_dX2 - aBounds.getGreaterX()) < lambda) &&
+			(Math.abs(_dY1 - aBounds.getLesserY()) < lambda) &&
+			(Math.abs(_dY2 - aBounds.getGreaterY()) < lambda)) {
 			return true;
 		}
 
