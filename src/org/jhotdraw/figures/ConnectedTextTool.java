@@ -42,8 +42,7 @@ public  class ConnectedTextTool extends TextTool {
 		if (getTypingTarget() != null) {
 			TextHolder textHolder = getTypingTarget();
 			setConnectedFigure(drawing().findFigureInsideWithout(x, y, textHolder.getRepresentingFigure()));
-			//TODO: remove redundant nullcheck for textHolder
-			if ((getConnectedFigure() != null) && (textHolder != null) && (getConnectedFigure().getTextHolder() != textHolder)) {
+			if ((getConnectedFigure() != null) && (getConnectedFigure().getTextHolder() != textHolder)) {
 				textHolder.connect(getConnectedFigure().getDecoratedFigure());
 				getConnectedFigure().addDependendFigure(getAddedFigure());
 			}
