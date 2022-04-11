@@ -74,9 +74,6 @@ public class PolygonTool extends AbstractTool {
 	public void mouseDown(MouseEvent e, int x, int y) {
 		super.mouseDown(e,x,y);
 		// replace pts by actual event pts
-		//FIXME: x and y never get used, why reassign?
-		x = e.getX();
-		y = e.getY();
 
 		if (e.getClickCount() >= 2) {
 			if (fPolygon != null) {
