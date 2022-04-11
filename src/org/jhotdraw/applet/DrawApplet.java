@@ -416,8 +416,7 @@ public class DrawApplet
 	}
 
 	protected void loadDrawing(String param) {
-		//FIXME: comparing string with ==
-		if (param == fgUntitled) {
+		if (param.equals(fgUntitled)) {
 			fDrawing.release();
 			initDrawing();
 			return;
