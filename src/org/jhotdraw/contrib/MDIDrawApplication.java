@@ -28,8 +28,7 @@ import javax.swing.*;
  * @author  Wolfram Kaiser <mrfloppy@users.sourceforge.net>
  * @version <$CURRENT_VERSION$>
  */
-//FIXME: Bad class name (underscore)
-public class MDI_DrawApplication extends DrawApplication {
+public class MDIDrawApplication extends DrawApplication {
 
 	/**
 	 * Constructs a drawing window with a default title.
@@ -38,7 +37,7 @@ public class MDI_DrawApplication extends DrawApplication {
 	private Desktop              fDesktop;
 	
 	
-	public MDI_DrawApplication() {
+	public MDIDrawApplication() {
 		this("JHotDraw");
 		
 	}
@@ -46,7 +45,7 @@ public class MDI_DrawApplication extends DrawApplication {
 	/**
 	 * Constructs a drawing window with the given title.
 	 */
-	public MDI_DrawApplication(String title) {
+	public MDIDrawApplication(String title) {
 		super(title);
 	}
 
@@ -57,7 +56,7 @@ public class MDI_DrawApplication extends DrawApplication {
 	 * @return	newly created application
 	 */
 	protected DrawApplication createApplication() {
-		return new MDI_DrawApplication();
+		return new MDIDrawApplication();
 	}
 
 	/**
