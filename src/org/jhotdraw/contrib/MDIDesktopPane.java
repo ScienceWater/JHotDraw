@@ -35,8 +35,7 @@ import java.beans.*;
  * @version <$CURRENT_VERSION$>
  */
 public class MDIDesktopPane extends JDesktopPane implements Desktop {
-	//FIXME: bad variable naming (make final)
-	private static int FRAME_OFFSET=20;
+	private static final int FRAME_OFFSET=20;
 	private MDIDesktopManager manager;
 	private DrawApplication myDrawApplication;
 	private DesktopEventService myDesktopEventService;
