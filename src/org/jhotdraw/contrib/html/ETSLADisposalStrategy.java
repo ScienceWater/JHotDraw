@@ -83,8 +83,7 @@ public class ETSLADisposalStrategy implements ResourceDisposabilityStrategy {
 	 *
 	 * @return   The manager value
 	 */
-	//FIXME: inconsistent synchronization on this and setManager
-	public DisposableResourceManager getManager() {
+	public synchronized DisposableResourceManager getManager() {
 		return manager;
 	}
 
