@@ -4,7 +4,7 @@
  * Project:		JHotdraw - a GUI framework for technical drawings
  *				http://www.jhotdraw.org
  *				http://jhotdraw.sourceforge.net
- * Copyright:	© by the original author(s) and all contributors
+ * Copyright:	ï¿½ by the original author(s) and all contributors
  * License:		Lesser GNU Public License (LGPL)
  *				http://www.opensource.org/licenses/lgpl-license.html
  */
@@ -42,6 +42,7 @@ public  class ConnectedTextTool extends TextTool {
 		if (getTypingTarget() != null) {
 			TextHolder textHolder = getTypingTarget();
 			setConnectedFigure(drawing().findFigureInsideWithout(x, y, textHolder.getRepresentingFigure()));
+			//TODO: remove redundant nullcheck for textHolder
 			if ((getConnectedFigure() != null) && (textHolder != null) && (getConnectedFigure().getTextHolder() != textHolder)) {
 				textHolder.connect(getConnectedFigure().getDecoratedFigure());
 				getConnectedFigure().addDependendFigure(getAddedFigure());
