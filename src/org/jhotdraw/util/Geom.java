@@ -20,8 +20,7 @@ import java.awt.geom.Line2D;
  *
  * @version <$CURRENT_VERSION$>
  */
-//FIXME: only private constructors, make final
-public class Geom {
+public final class Geom {
 
 	private Geom() {} // never instantiated
 
