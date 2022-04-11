@@ -382,11 +382,11 @@ public class HTMLTextAreaFigure extends TextAreaFigure
 		}
 		if (g != null) {
 			g2.setClip(savedClip);
+			
+			// redraw the border to prevent smearing
+			drawFrame(g);
 		}
 
-		// redraw the border to prevent smearing
-		// FIXME: can be passing null parameter into drawFrame
-		drawFrame(g);
 		return displayBox.height;
 	}
 
